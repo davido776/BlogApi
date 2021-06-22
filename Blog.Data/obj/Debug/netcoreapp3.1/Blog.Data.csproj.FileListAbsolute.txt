@@ -1,0 +1,15 @@
+C:\Users\hp\source\repos\Blog\Blog.Data\bin\Debug\netcoreapp3.1\Blog.Models.dll
+C:\Users\hp\source\repos\Blog\Blog.Data\obj\Debug\netcoreapp3.1\Blog.Data.csprojAssemblyReference.cache
+C:\Users\hp\source\repos\Blog\Blog.Data\obj\Debug\netcoreapp3.1\Blog.Data.AssemblyInfoInputs.cache
+C:\Users\hp\source\repos\Blog\Blog.Data\obj\Debug\netcoreapp3.1\Blog.Data.AssemblyInfo.cs
+C:\Users\hp\source\repos\Blog\Blog.Data\bin\Debug\netcoreapp3.1\Blog.Data.deps.json
+C:\Users\hp\source\repos\Blog\Blog.Data\bin\Debug\netcoreapp3.1\Blog.Data.runtimeconfig.json
+C:\Users\hp\source\repos\Blog\Blog.Data\bin\Debug\netcoreapp3.1\Blog.Data.runtimeconfig.dev.json
+C:\Users\hp\source\repos\Blog\Blog.Data\bin\Debug\netcoreapp3.1\Blog.Data.dll
+C:\Users\hp\source\repos\Blog\Blog.Data\bin\Debug\netcoreapp3.1\Blog.Data.pdb
+C:\Users\hp\source\repos\Blog\Blog.Data\bin\Debug\netcoreapp3.1\Blog.Models.pdb
+C:\Users\hp\source\repos\Blog\Blog.Data\obj\Debug\netcoreapp3.1\Blog.Data.csproj.CoreCompileInputs.cache
+C:\Users\hp\source\repos\Blog\Blog.Data\obj\Debug\netcoreapp3.1\Blog.Data.csproj.CopyComplete
+C:\Users\hp\source\repos\Blog\Blog.Data\obj\Debug\netcoreapp3.1\Blog.Data.dll
+C:\Users\hp\source\repos\Blog\Blog.Data\obj\Debug\netcoreapp3.1\Blog.Data.pdb
+C:\Users\hp\source\repos\Blog\Blog.Data\obj\Debug\netcoreapp3.1\Blog.Data.genruntimeconfig.cache
