@@ -57,16 +57,16 @@ namespace Blog.Data.Migrations
                     b.Property<string>("Body")
                         .HasColumnType("TEXT");
 
-                    b.Property<DateTime>("CreatedAt")
+                    b.Property<DateTime>("DateCreated")
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("DateUpdated")
                         .HasColumnType("TEXT");
 
                     b.Property<int>("NumberOfLikes")
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("PostId")
-                        .HasColumnType("TEXT");
-
-                    b.Property<DateTime>("UpdatedAt")
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");
@@ -81,6 +81,7 @@ namespace Blog.Data.Migrations
             modelBuilder.Entity("Blog.Models.Connection", b =>
                 {
                     b.Property<string>("Id")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("RequestById")
@@ -140,7 +141,7 @@ namespace Blog.Data.Migrations
 
             modelBuilder.Entity("Blog.Models.Post", b =>
                 {
-                    b.Property<string>("Id")
+                    b.Property<string>("Title")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("AppUserId")
@@ -149,7 +150,13 @@ namespace Blog.Data.Migrations
                     b.Property<string>("Body")
                         .HasColumnType("TEXT");
 
-                    b.Property<DateTime>("CreatedAt")
+                    b.Property<DateTime>("DateCreated")
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("DateUpdated")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Id")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("ImageUrl")
@@ -161,13 +168,7 @@ namespace Blog.Data.Migrations
                     b.Property<string>("Subtitle")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("Title")
-                        .HasColumnType("TEXT");
-
-                    b.Property<DateTime>("UpdatedAt")
-                        .HasColumnType("TEXT");
-
-                    b.HasKey("Id");
+                    b.HasKey("Title");
 
                     b.HasIndex("AppUserId");
 

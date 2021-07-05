@@ -23,6 +23,7 @@ using Blog.Models.settings;
 using System.Security.Claims;
 using Microsoft.AspNetCore.Http;
 using System.Net.Http;
+using Blog.Data.SeedData.json;
 
 namespace Blog.API
 {
@@ -47,6 +48,7 @@ namespace Blog.API
             services.AddIdentity<AppUser, IdentityRole>().AddEntityFrameworkStores<BlogDbContext>();
             services.AddScoped<IAuthenticationService, Authentication>();
             services.AddScoped<IPostService, PostService>();
+            services.AddScoped<IConnectionService, ConnectionService>();
             services.AddScoped<IFileUpload, FileUpload>();
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             services.Configure<IdentityOptions>(options =>
@@ -101,6 +103,7 @@ namespace Blog.API
             app.UseAuthentication();
             app.UseAuthorization();
 
+            Seeder.EnsurePopulated(app);
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();

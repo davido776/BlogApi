@@ -35,8 +35,7 @@ namespace Blog.API.Controllers
 
 
         [HttpPost]
-      
-        public Response<AddPostResDto> AddPost([FromForm] AddPostReqDto model)
+        public Response<AddPostResDto> Add([FromForm] AddPostReqDto model)
         {
             
             var response = _postService.AddPost(model, id);
@@ -47,14 +46,14 @@ namespace Blog.API.Controllers
 
         [HttpGet("{id}")]
         
-        public Response<GetPostDto> GetPost(string id)
+        public Response<GetPostDto> Get(string id)
         {
             var response = _postService.GetPost(id);
             return response;
         }
 
         [HttpPut("{postid}")]
-        public async Task<Response<string>> UpdatePost([FromForm] UpdatePostDto model, string postid)
+        public async Task<Response<string>> Update([FromForm] UpdatePostDto model, string postid)
         {
             var response = await _postService.UpdatePost(model, postid, id);
             return response;
@@ -64,7 +63,7 @@ namespace Blog.API.Controllers
         [HttpPost]
         [Route("like-post/{postid}")]
 
-        public async Task<Response<string>> LikePost(string postid)
+        public async Task<Response<string>> Like(string postid)
         {
             var response = await _postService.LikePost(postid, id);
             return response;
@@ -72,7 +71,7 @@ namespace Blog.API.Controllers
 
         [HttpPost]
         [Route("comment/{postid}")]
-        public async Task<Response<string>> CommentOnPost([FromBody] string Body,string postid)
+        public async Task<Response<string>> Comment([FromBody] string Body,string postid)
         {
             var response = await _postService.CommentOnPost(Body, postid, id);
             return response;

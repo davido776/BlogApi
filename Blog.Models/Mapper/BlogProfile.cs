@@ -20,7 +20,16 @@ namespace Blog.Models.Mapper
                 .ForMember(getpostdto=>getpostdto.Likes, x=>x.MapFrom(x=>x.Likes))
                 .ReverseMap();
             CreateMap<Like, GetLikeDto>().ReverseMap();
+
+
+            CreateMap<AppUser, GetUserDto>().ReverseMap();
+
+            CreateMap<Connection, ConnectionDto>()
+                .ForMember(dto => dto.RequestBy, opt => opt.MapFrom(src => src.RequestBy));
                 
+
+
+
         }
     }
 }

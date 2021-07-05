@@ -36,8 +36,8 @@ namespace Blog.Models
         public virtual ICollection<Connection> Connections { get; set; }
 
 
-        public DateTime CreatedAt { get; set; } 
-        public DateTime UpdatedAt { get; set; }
+        public DateTime CreatedAt { get; set; } = DateTime.Now;
+        public DateTime UpdatedAt { get; set; } = DateTime.Now;
         public string ProfilePicUrl { get; set; }
 
     }

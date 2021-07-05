@@ -5,23 +5,19 @@ using System.Text;
 
 namespace Blog.Models
 {
-    public class Post
+    public class Post : BaseEntity
     {
         public Post()
         {
             Comments = new List<Comment>();
-            Likes = new List<Like>();
-            
+            Likes = new List<Like>(); 
         }
 
-        [Key]
-        public string Id { get; set; } = Guid.NewGuid().ToString();
+        
         public string Title { get; set; }
         public string Subtitle { get; set; }
         public string Body { get; set; }
-        public DateTime CreatedAt { get; set; } = DateTime.Now;
-        public DateTime UpdatedAt { get; set; }
-
+        
         public string ImageUrl { get; set; }
         public int NumberOfLikes { get; set; }
 

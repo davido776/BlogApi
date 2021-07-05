@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
@@ -8,13 +9,16 @@ namespace Blog.Models
     public class Connection
     {
        
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public string Id { get; set; }
   
         [ForeignKey("RequestedBy")]
-        public virtual string RequestById { get; set; }
+        public string RequestById { get; set; }
        
-        public   virtual AppUser RequestBy{ get; set; }
-        public  virtual AppUser RequestTo { get; set; }
+        public   AppUser RequestBy{ get; set; }
+
+        public  string RequestToId { get; set; }
+        public   AppUser RequestTo { get; set; }
         public ConnectionStatus connectionStatus { get; set; }
 
        

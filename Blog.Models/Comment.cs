@@ -5,10 +5,9 @@ using System.Text;
 
 namespace Blog.Models
 {
-    public class Comment
+    public class Comment : BaseEntity
     {
-        [Key]
-        public string Id { get; set; } = Guid.NewGuid().ToString();
+        
         public string Body { get; set; }
 
         public string AppUserId { get; set; }
@@ -20,8 +19,6 @@ namespace Blog.Models
 
         public int  NumberOfLikes { get; set; }
 
-        public DateTime CreatedAt { get; set; }
-        public DateTime UpdatedAt { get; set; }
-
+       
     }
 }

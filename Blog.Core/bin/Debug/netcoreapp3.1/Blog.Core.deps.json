@@ -602,6 +602,7 @@
       "Blog.Data/1.0.0": {
         "dependencies": {
           "Blog.Models": "1.0.0",
+          "Microsoft.AspNetCore.Http.Abstractions": "2.2.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "5.0.6",
           "Microsoft.EntityFrameworkCore": "5.0.6",
           "Microsoft.EntityFrameworkCore.Sqlite": "5.0.6"

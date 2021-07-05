@@ -20,9 +20,19 @@ namespace Blog.Data
         public DbSet<Address> Addresses { get; set; }
         public DbSet<Comment> Comments{ get; set; }
 
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            base.OnModelCreating(builder);
+            builder.Entity<Connection>()
+                   .Property(c => c.Id)
+                   .ValueGeneratedOnAdd();
+        }
 
-       
+
+
     }
+
+    
 
 
    
